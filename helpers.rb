@@ -5,11 +5,11 @@ helpers do
   def page_title
     case
       when @post
-        "#{@post.title} - Nathan Hoad"
+        "#{@post.title} - Ben Hoad"
       when @tag
-        "Tagged with ##{@tag} - Nathan Hoad"
+        "Tagged with ##{@tag} - Ben Hoad"
       else
-        "Nathan Hoad"
+        "Ben Hoad"
     end
   end
   
@@ -29,7 +29,7 @@ helpers do
       "Posts tagged with ##{@tag}"
       
     else
-      "I'm Nathan Hoad and I'm a software geek that loves the beauty of simple things. I blog about Ruby, Rails, Sinatra, Git, and Graphic Design"
+      "I'm Ben Hoad and I'm a frontend developer and designer - I blog about life, code, design, and stuff."
     end
   end
   

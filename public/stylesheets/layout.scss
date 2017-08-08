@@ -1,6 +1,5 @@
-/*
-  blue: #3f78bd
-*/
+
+$font :  "Montserrat", sans-serif;
 
 /* Layout */
 .row {
@@ -39,13 +38,70 @@ hr {
 }
 
 body > header {
+    max-width:800px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:40px;
+    min-height:200px;
+}
+body > header > .navigation > .nav {
+    width:200px;
+    text-align:left;
+    padding-top:40px;
+}
+body > header > .navigation  span {
+    cursor:pointer;
+}
+body > header > .navigation  span:hover {
+    text-decoration: underline;
+}
+body > header > .navigation > .nav > ul {
+    list-style-type: none;
+    margin:0px;
+    padding:0px;
+    font-family: $font;
+    font-weight: 300;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size:12px;
+    margin-right:-4px;
+}
+body > header > .navigation > .nav > ul > li {
+    margin-top:12px;
+    margin-bottom:12px;
+}
+body > header > .navigation > .nav:nth-child(3) {
+    text-align:right;
+}
+body > header > .navigation{
+    display:flex;
+}
+body > header > .navigation > .spinner {
+    width:400px;
+    min-height:200px;
+}
+body > header > .subline {
+    width:100%;
+    border-top: 1px solid #333;
+    text-align: center;
+
+}
+body > header > .subline > .tagline {
+    background:white;
+    padding:0px 8px;
+    display:inline-block;
+    margin-top:-8px;
+    font-family: $font;
+    font-size:11px;
+    letter-spacing: 2px;
+    margin-right:-2px;
 }
 body > header > h1 > a {
-    background: url(/images/logo.png) no-repeat top;
+    background: url(/images/@2x.png) no-repeat top;
     display: block;
-    width: 480px;
-    height: 94px;
-    margin: 40px auto;
+    width:100%;
+    min-height:27px;
+    background-position: 50% 50%;
 }
 body > header > h1 > a > span {
     display: none;
@@ -74,9 +130,13 @@ body > section > ul > li {
 }
 body > section > ul a {
     color: #333;
-    font-family: 'Arvo', georgia, serif;
+    font-family: $font;
     font-size: 23px;
     line-height: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    margin-right:-0.1em;
 }
 
 body > section > aside {
@@ -85,7 +145,7 @@ body > section > aside {
 }
 body > section > aside > a {
     color: #999;
-    font-family: 'Arvo', georgia, serif;
+    font-family: $font;
     font-size: 23px;
     line-height: 30px;
 }
@@ -95,7 +155,7 @@ body > section > aside > a:hover {
 
 body > section > aside > h3 {
     color: #999;
-    font-family: 'Arvo', georgia, serif;
+    font-family: $font;
     font-size: 14px;
     font-weight: normal;
     margin: 0 0 15px 0;
@@ -107,7 +167,7 @@ body > section > aside > h3 > a:hover {
     color: #999;
 }
 body > section > aside > ul {
-    font-family: 'Enriqueta', georgia, serif;
+    font-family: $font;
     font-size: 18px;
     color: #333;
     list-style: none;
@@ -125,7 +185,7 @@ body > section > aside > ul > li > a {
 body > section > header {
     text-align: center;
     margin-bottom: 25px;
-    font-family: 'Georgia';
+    font-family: $font;
     font-size: 16px;
     font-style: italic;
     color: #090;
@@ -140,12 +200,15 @@ article > header {
     margin-bottom: 40px;
 }
 article > header > h2 {
-    font-family: 'Arvo', georgia, serif;
+    font-family: $font;
     font-size: 35px;
     line-height: 45px;
     text-align: center;
     margin-top: 40px;
     margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-right:-0.1em;
 }
 article > header > h2 > a {
     color: #333;
@@ -185,14 +248,14 @@ article > header > cite {
 article > header > cite > a {
     font-size: 20px;
     color: #090;
-    font-family: 'Enriqueta', georgia, serif;
+    font-family: $font;
     text-decoration: underline;
 }
 article > header > cite > a:hover {
     color: #090;
 }
 article > p {
-    font-family: 'Enriqueta', georgia, serif;
+    font-family: $font;
     text-align: left;
     font-size: 18px;
     line-height: 25px;
@@ -213,7 +276,7 @@ article > p a {
     text-decoration: underline;
 }
 article > ul {
-    font-family: 'Enriqueta', georgia, serif;
+    font-family: $font;
     text-align: justify;
     font-size: 18px;
     line-height: 25px;
@@ -228,13 +291,13 @@ article > blockquote {
 }
 article > blockquote > p {
     color: #900;
-    font-family: 'Enriqueta', georgia, serif;
+    font-family: $font;
     font-size: 18px;
     font-style: italic;
 }
 article > h3 {
     color: #999;
-    font-family: "Arvo";
+    font-family: $font;
     font-weight: normal;
     font-size: 22px;
     line-height: 50px;
@@ -268,7 +331,7 @@ body > footer > h2 {
 body > footer > h2 > span {
     color: #444;
     display: block;
-    font-family: "Gloria Hallelujah";
+    font-family: $font;
     font-size: 17px;
     line-height: 24px;
     margin: auto;
@@ -307,7 +370,7 @@ body > section > section {
 }
 body > section > section > h2 {
     color: #999;
-    font-family: 'Arvo', georgia, serif;
+    font-family: $font;
     font-size: 14px;
     font-weight: normal;
     margin-top: 30px;
@@ -321,7 +384,7 @@ body > section > section > ul > li {
     margin: 10px 0;
 }
 body > section > section > ul a {
-    font-family: 'Arvo', georgia, serif;
+    font-family: $font;
     color: black;
     font-size: 18px;
 }
@@ -439,27 +502,10 @@ code.shell span.keywords {
 }
 .aff > .internal > .from {
     color: #666;
-    font-family: 'Enriqueta', georgia, serif;
+    font-family: $font;
     font-size: 16px;
 }
 
-/* PayPal */
-.coffee {
-    margin-top: 30px;
-}
-.coffee p {
-    font-family: 'Enriqueta', georgia, serif;
-    text-align: justify;
-    font-size: 18px;
-    line-height: 25px;
-}
-.coffee form {
-    margin-top: 20px;
-    text-align: center;
-}
-.coffee input {
-    max-width: 280px;
-}
 
 /* Mobile */
 @media all and (max-device-width: 480px) {
@@ -481,7 +527,7 @@ code.shell span.keywords {
         padding: 0 15px;
     }
     article h2 {
-        font-family: 'Arvo', georgia, serif;
+        font-family: $font;
         font-size: 30px;
         line-height: 40px;
         text-align: center;
@@ -495,7 +541,7 @@ code.shell span.keywords {
     only screen and (min-device-pixel-ratio: 1.5) {
     body > header > h1 > a {
         background-image: url(/images/logo@2x.png);
-        background-size: 84px 91px;
+        background-size: 234px 27px;
     }
     body > footer > h2 {
         background-image: url(/images/nathan@2x.png);

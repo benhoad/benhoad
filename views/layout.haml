@@ -6,21 +6,21 @@
 
     %meta{ property: 'og:title', content: page_title }/
     %meta{ property: 'og:description', content: page_description }/
-    %meta{ property: 'og:image', content: 'https://nathanhoad.net/images/nathan-profile.png' }/
-    %meta{ property: 'og:url', content: 'https://nathanhoad.net' }/
+    %meta{ property: 'og:image', content: 'https://benhoad.net/images/ben-profile.png' }/
+    %meta{ property: 'og:url', content: 'https://benhoad.net' }/
     %meta{ property: 'og:type', content: 'article' }/
-    %meta{ property: 'fb:admins', content: '218700192' }/
-    %meta{ property: 'article:author', content: '218700192' }/
+    %meta{ property: 'fb:admins', content: '632768409' }/
+    %meta{ property: 'article:author', content: '632768409' }/
     
-    %meta{ name: "author", content: "Nathan Hoad" }/
-    %meta{ name: "verify-v1", content: "FJjra037EqYRGo8w0Atq5BHkBi8B+MPZSD+0jKQebLs=" }/
+    %meta{ name: "author", content: "Ben Hoad" }/
+    %meta{ name: "google-site-verification", content: "wtlEOFJ0tj_1UxYEj6Yoru93npUE6Gx0ahj8rrP5nik" }/
     %meta{ :'http-equiv' => "Content-type", content: "text/html;charset=UTF-8" }/
     
-    %meta{ name: 'p:domain_verify', content: "5c8fe00840c14d6c92865fc017137b69" }/
+    %meta{ name: 'p:domain_verify', content: "af2f718c472c4377aa9bccb03e81aa4e" }/
     
     %meta{ name: "viewport", content: "width=device-width, minimum-scale=1.0, maximum-scale=1.0" }/
     %link{ rel: "apple-touch-icon", type: "image/png", href: "/images/apple-touch-icon.png" }/
-    %link{ rel: "alternate", type: "application/rss+xml", href: "http://feeds.feedburner.com/nathanhoad", title: "NathanHoad.net RSS" }/
+    %link{ rel: "alternate", type: "application/rss+xml", href: "http://feeds.feedburner.com/benhoad", title: "benhoad.net RSS" }/
     %link{ rel: "icon", type: "image/png", href: "/images/favicon.png" }/
     
     %style
@@ -28,40 +28,66 @@
     
   %body
     %header
+      .navigation
+        .nav
+          %ul
+            %li
+              = link_to 'Life', "/tags/life"
+            %li
+              = link_to 'Design', "/tags/design"
+            %li
+              = link_to 'Code', "/tags/code"
+            %li
+              = link_to 'Stuff', "/tags/stuff"
+            %li
+              = link_to 'Archive', "/archive"
+
+        .spinner#spinner
+        .nav
+          %ul
+            %li
+              = link_to 'Twitter', 'http://twitter.com/benhoad'
+            %li
+              = link_to 'GitHub', 'http://github.com/benhoad'
+            %li
+              = link_to 'Instagram', 'http://instagram.com/ben_hoad'
+            %li
+              = link_to 'Linkedin', 'https://www.linkedin.com/in/benjamin-hoad-21797168/'
+            %li#elink
+              %span Email
       %h1
         %a{ href: '/' }
-          %span Nathan Hoad
+          %span Ben Hoad
+      .subline
+        .tagline
+          UX UI STUFF
     
     %section
-      %hr
+    
       = yield
-      %hr
+      
           
     %footer
-      %h2
-        %span
-          Hi! I'm Nathan Hoad. I make #{link_to 'Athletable', 'https://athletable.com'}
-          and #{link_to 'Slacker', 'https://slacker.nathanhoad.net'}.
       
       %section
-        = link_to 'Twitter', 'http://twitter.com/nathanhoad'
+        = link_to 'Twitter', 'http://twitter.com/benhoad'
         &middot;
-        = link_to 'GitHub', 'http://github.com/nathanhoad'
+        = link_to 'GitHub', 'http://github.com/benhoad'
         &middot;
-        = link_to 'Instagram', 'http://instagram.com/nathanhoad'
+        = link_to 'Instagram', 'http://instagram.com/ben_hoad'
         &middot;
-        = link_to 'YouTube', 'https://www.youtube.com/channel/UCIdCxj0B9BXJ5tHXLgNWF6w'
+        = link_to 'Linkedin', 'https://www.linkedin.com/in/benjamin-hoad-21797168/'
         &middot;
         = link_to 'RSS', '/rss'
       
       %aside
         &copy;
         = Time.now.year
-        Nathan Hoad  
+        Ben Hoad
   
     :javascript
       var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-650804-3']);
+      _gaq.push(['_setAccount', 'UA-9426233-1']);
       _gaq.push(['_trackPageview']);
       (function() {
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
@@ -70,7 +96,7 @@
       })();
       
       WebFontConfig = {
-        google: { families: ['Arvo', 'Enriqueta', 'Gloria Hallelujah'] }
+        google: { families: ['Montserrat'] }
       };
       (function() {
         var wf = document.createElement('script');
@@ -83,3 +109,33 @@
       })();
       
       #{@script}
+
+      cheet('↑ ↑ ↓ ↓ ← → ← → b a', function () {
+
+        var textureLoader = new THREE.TextureLoader();
+        console.log('cheet run');
+        let texture0 = textureLoader.load( '/images/heman1.jpg' );
+        let texture1 = textureLoader.load( '/images/heman2.jpg' );
+        let texture2 = textureLoader.load( '/images/code.png' );
+        let texture3 = textureLoader.load( '/images/code.png' );
+        let texture4 = textureLoader.load( '/images/heman3.jpg' );
+        let texture5 = textureLoader.load( '/images/heman4.jpg' );
+
+        let materials = [
+            new THREE.MeshBasicMaterial( { map: texture0 } ),
+            new THREE.MeshBasicMaterial( { map: texture1 } ),
+            new THREE.MeshBasicMaterial( { map: texture2 } ),
+            new THREE.MeshBasicMaterial( { map: texture3 } ),
+            new THREE.MeshBasicMaterial( { map: texture4 } ),
+            new THREE.MeshBasicMaterial( { map: texture5 } )
+        ];
+
+        let faceMaterial = new THREE.MeshFaceMaterial( materials );
+
+        cube.material = faceMaterial;
+        clockspeed = 250;
+        console.log('cheet run end');
+
+      });
+
+      

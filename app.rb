@@ -103,13 +103,13 @@ end
 
 before do
   unless settings.development?
-    redirect "https://nathanhoad.net" if request.host != 'nathanhoad.net' || request.scheme != 'http'
+    redirect "https://benhoad.net" if request.host != 'benhoad.net' || request.scheme != 'http'
   end
   
   cache_control :public, max_age: 1.week
   
   @style = scss :application, style: :compressed
-  @script = [:code_highlighter, :application].map{ |file| File.open(File.dirname(__FILE__) + '/public/javascripts/' + file.to_s + '.js').read }.join("\n")
+  @script = [:three, :Projector,:code_highlighter, :application, :clipboard, :cheet, :cube].map{ |file| File.open(File.dirname(__FILE__) + '/public/javascripts/' + file.to_s + '.js').read }.join("\n")
 end
 
 
