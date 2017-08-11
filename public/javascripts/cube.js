@@ -8,9 +8,9 @@ var mouseXOnMouseDown = 0;
 var windowHalfX = getContainerWidth() / 2;
 var windowHalfY = getContainerHeight() / 2;
 var clockspeed = 1000;
+var is_sprites = true;
 
 document.addEventListener('DOMContentLoaded', function windowLoad () {
-    console.log(container);
     init();
     animate();
 })
@@ -66,10 +66,6 @@ function init() {
     renderer.setPixelRatio( window.devicePixelRatio );
     renderer.setSize( getContainerWidth(), getContainerHeight() );
     container.appendChild( renderer.domElement );
-    // document.addEventListener( 'mousedown', onDocumentMouseDown, false );
-    // document.addEventListener( 'touchstart', onDocumentTouchStart, false );
-    // document.addEventListener( 'touchmove', onDocumentTouchMove, false );
-    //
     window.addEventListener( 'resize', onWindowResize, false );
 }
 function onWindowResize() {
@@ -80,50 +76,13 @@ function onWindowResize() {
     camera.updateProjectionMatrix();
     renderer.setSize( width, height );
 }
-//
-/*
-function onDocumentMouseDown( event ) {
-    event.preventDefault();
-    document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-    document.addEventListener( 'mouseup', onDocumentMouseUp, false );
-    document.addEventListener( 'mouseout', onDocumentMouseOut, false );
-    mouseXOnMouseDown = event.clientX - windowHalfX;
-    targetRotationOnMouseDown = targetRotation;
-}
-function onDocumentMouseMove( event ) {
-    mouseX = event.clientX - windowHalfX;
-    targetRotation = targetRotationOnMouseDown + ( mouseX - mouseXOnMouseDown ) * 0.02;
-}
-function onDocumentMouseUp( event ) {
-    document.removeEventListener( 'mousemove', onDocumentMouseMove, false );
-    document.removeEventListener( 'mouseup', onDocumentMouseUp, false );
-    document.removeEventListener( 'mouseout', onDocumentMouseOut, false );
-}
-function onDocumentMouseOut( event ) {
-    document.removeEventListener( 'mousemove', onDocumentMouseMove, false );
-    document.removeEventListener( 'mouseup', onDocumentMouseUp, false );
-    document.removeEventListener( 'mouseout', onDocumentMouseOut, false );
-}
-function onDocumentTouchStart( event ) {
-    if ( event.touches.length === 1 ) {
-        event.preventDefault();
-        mouseXOnMouseDown = event.touches[ 0 ].pageX - windowHalfX;
-        targetRotationOnMouseDown = targetRotation;
-    }
-}
-function onDocumentTouchMove( event ) {
-    if ( event.touches.length === 1 ) {
-        event.preventDefault();
-        mouseX = event.touches[ 0 ].pageX - windowHalfX;
-        targetRotation = targetRotationOnMouseDown + ( mouseX - mouseXOnMouseDown ) * 0.05;
-    }
-}*/
-//
+
 function animate() {
     requestAnimationFrame( animate );
     render();
 }
 function render() {
+    TWEEN.update();
     plane.rotation.y = cube.rotation.y = Date.now()/clockspeed;
     renderer.render( scene, camera );
 }
@@ -134,4 +93,81 @@ function getContainerWidth() {
 }
 function getContainerHeight() {
     return parseInt(window.getComputedStyle(document.getElementById( 'spinner' )).getPropertyValue("height"));
+}
+
+function konami () {
+    add_sprites();
+    var textureLoader = new THREE.TextureLoader();
+    let texture0 = textureLoader.load( '/images/heman1.jpg' );
+    let texture1 = textureLoader.load( '/images/heman2.jpg' );
+    let texture2 = textureLoader.load( '/images/code.png' );
+    let texture3 = textureLoader.load( '/images/code.png' );
+    let texture4 = textureLoader.load( '/images/heman3.jpg' );
+    let texture5 = textureLoader.load( '/images/heman4.jpg' );
+
+    let materials = [
+        new THREE.MeshBasicMaterial( { map: texture0 } ),
+        new THREE.MeshBasicMaterial( { map: texture1 } ),
+        new THREE.MeshBasicMaterial( { map: texture2 } ),
+        new THREE.MeshBasicMaterial( { map: texture3 } ),
+        new THREE.MeshBasicMaterial( { map: texture4 } ),
+        new THREE.MeshBasicMaterial( { map: texture5 } )
+    ];
+
+    let faceMaterial = new THREE.MeshFaceMaterial( materials );
+
+    cube.material = faceMaterial;
+    clockspeed = 250;
+
+
+}
+
+function add_sprites(){
+    let material = new THREE.SpriteMaterial( {
+        map: new THREE.CanvasTexture( generateSprite() ),
+        blending: THREE.AdditiveBlending
+    } );
+                
+    if(is_sprites){
+        for ( var i = 0; i < 1000; i++ ) {
+            particle = new THREE.Sprite( material );
+            initParticle( particle, i * 10 );
+            scene.add( particle );
+        }
+    }
+}
+
+function generateSprite() {
+    var canvas = document.createElement( 'canvas' );
+    canvas.width = 16;
+    canvas.height = 16;
+    var context = canvas.getContext( '2d' );
+    var gradient = context.createRadialGradient( canvas.width / 2, canvas.height / 2, 0, canvas.width / 2, canvas.height / 2, canvas.width / 2 );
+    gradient.addColorStop( 0, 'rgba(255,105,180,10)' );
+    gradient.addColorStop( 0.2, 'rgba(50,50,50,10)' );
+    gradient.addColorStop( 0.4, 'rgba(255,105,180,10)' );
+    gradient.addColorStop( 1, 'rgba(0,0,0,10)' );
+    context.fillStyle = gradient;
+    context.fillRect( 0, 0, canvas.width, canvas.height );
+    return canvas;
+}
+
+function initParticle( particle, delay ) {
+    var particle = this instanceof THREE.Sprite ? this : particle;
+    var delay = delay !== undefined ? delay : 0;
+    particle.position.set( 0, 100, 0 );
+    particle.scale.x = particle.scale.y = Math.random() * 32 + 16;
+    new TWEEN.Tween( particle )
+        .delay( delay )
+        .to( {}, 10000 )
+        .onComplete( initParticle )
+        .start();
+    new TWEEN.Tween( particle.position )
+        .delay( delay )
+        .to( { x: Math.random() * 4000 - 2000, y: Math.random() * 1000 - 500, z: Math.random() * 4000 - 2000 }, 10000 )
+        .start();
+    new TWEEN.Tween( particle.scale )
+        .delay( delay )
+        .to( { x: 0.01, y: 0.01 }, 10000 )
+        .start();
 }

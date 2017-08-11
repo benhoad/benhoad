@@ -78,6 +78,13 @@ helpers do
     end
   end
   
+  def main_image (post)
+    post.main_image
+  end
+
+  def image_tag(name)
+    "<img src='#{name}' alt='#{name}' />"
+  end
   
   # Link to a post
   def post_title (post)
@@ -102,7 +109,7 @@ helpers do
   def tags (tags)
     tags = [tags] if tags.is_a? String
     
-    tags = tags.map{ |tag| "<li><a href=\"/tags/#{tag}\">##{tag}</a></li>" }
+    tags = tags.map{ |tag| "<li><a href=\"/tags/#{tag}\">#{tag}</a></li>" }
     
     "<ul>#{tags.sort.join(' ')}</ul>"
   end

@@ -1,0 +1,31 @@
+# JS copy to clipboard
+
+ - main_image: /media/clipboard.jpg
+ - published: 2017-05-15 12:00
+ - tags: code, learning
+
+![Image](/media/clipboard.jpg)
+
+I feel I should preface this with pointing out there's a useful npm which I generally use for this called [Clipboard.js](https://www.npmjs.com/package/clipboard-js "Clipboard js npm link").
+
+For those who are curious of the basic raw JS imlplementation of copying plain text to the clipboard it's a little bit of a ritual.
+
+My implementation:
+
+    #! Javascript
+    function copyToClipboard(text){
+        var input = document.createElement('textarea');
+        let scrolltop = document.body.scrollTop; //store current scroll position
+        document.body.appendChild(input);
+        input.value = text;
+        input.focus(); //this will scroll to the bottom of the page to gain focus
+        input.select();
+        document.execCommand('Copy'); //copy to clipboard
+        input.remove();
+        document.body.scrollTop = scrolltop; //reset scroll to original position
+      }
+
+The key piece to this is the "Document.execCommand()" function, it can have slightly different behavior per browser and there are some conditions to its use that aren't immediately obvious. One being that using the execCommand('Copy') call outside of anything but an onClick listener won't work. It's a basic user interaction safety measure to ensure no autonomous abuse.
+
+I use this to handle my email copying - I use the clipboard copy instead of a conventional Mailto link for a few reasons, primarily because I hate accidentally clicking them and having to force-quit the Mail app while it's trying to load.
+

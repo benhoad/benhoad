@@ -1,7 +1,12 @@
 - if posts
-  %ul
+  %ul.index
     - posts.each do |post|
-      %li= post_title(post)
+      %li
+        %a{href: "/#{post.slug}"}
+          = image_tag(main_image(post))
+        = post_title(post)
+        .tags
+          = tags(post.tags)
   
   %aside
     = link_to 'Browse the archives', '/archive'

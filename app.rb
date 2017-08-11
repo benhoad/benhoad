@@ -109,7 +109,7 @@ before do
   cache_control :public, max_age: 1.week
   
   @style = scss :application, style: :compressed
-  @script = [:three, :Projector,:code_highlighter, :application, :clipboard, :cheet, :cube].map{ |file| File.open(File.dirname(__FILE__) + '/public/javascripts/' + file.to_s + '.js').read }.join("\n")
+  @script = [:three, :Projector,:code_highlighter, :application, :tween, :cheet, :cube].map{ |file| File.open(File.dirname(__FILE__) + '/public/javascripts/' + file.to_s + '.js').read }.join("\n")
 end
 
 

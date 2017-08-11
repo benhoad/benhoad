@@ -1,0 +1,17 @@
+# Rails Girls 2017
+
+ - main_image: /media/railsgirls.jpg
+ - published: 2017-07-26 10:42
+ - tags: life, code
+
+![Image](/media/railsgirls.jpg)
+
+Over the weekend I had the joy of mentoring at this year\'s [Rails Girls](http://railsgirls.com/ "Rails Girls"), which is a workshop aimed at getting more women into IT by teaching them the basics of Ruby on Rails.
+
+![Image](/media/ruby.jpg)
+
+This year I was asked to give the intro into HTML, CSS, and JS - while it might have seemed like an information overload the purpose of which was to demonstrate that great things can be accomplished from a few lines of code.
+
+[I've deployed my presentation on Github pages but it\'s lacking in notes... ](https://benhoad.github.io/html_css_js_slideshow/ "Link to presentation")
+
+tldr; HTML is structure, CSS is the style, JS is the interactivity - during the presentation I continued with a metaphor of a house, where the HTML was the physical construction, the CSS being the paint/finishing, and JS the light switches and swinging doors.

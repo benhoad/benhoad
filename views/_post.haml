@@ -4,7 +4,8 @@
     %aside
       = link_to_post post, "<span data-date='#{post.published_at}'></span>"
       &middot;
-      = tags(post.tags)
+      .tags
+        = tags(post.tags)
     - if post.link
       %cite
         = link_to post.link, post.link

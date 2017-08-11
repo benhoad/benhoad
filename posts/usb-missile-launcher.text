@@ -1,0 +1,34 @@
+# USB Missile Launcher
+
+ - main_image: https://benhoad.files.wordpress.com/2009/03/img_2153.jpg
+ - published: 2009-03-13 8:06
+ - tags: code, projects, stuff
+
+![Image](https://benhoad.files.wordpress.com/2009/03/img_2153.jpg)
+
+During a very boring week at college I acquired a novelty [USB rocket launcher](http://dreamcheeky.com/thunder-missile-launcher 'USB Rocket Launcher website'). The idea of being able to shoot people from the comfort of ones desk was appealing at first but became old fast, partially due to the sheer difficulty of aiming.
+
+Initially I sticky taped my webcam to the top of the launcher, it made aiming slightly easier but also got me thinking; All I'm doing is watching a live feed and clicking buttons to aim, how hard could it be to make this happen on someone else's computer remotely? After a bit of digging I came accross a piece of software, [Roborealm]
+(http://www.roborealm.com/ "Roborealm homepage"), which one person had used for similar project.
+
+After about three days of tinkering I finally had a working prototype... constructed entirely out of blutac and sticky tape…
+
+More on the software side later.
+
+Once it was fully operational and tested I added a 5mW laser diode for increased aim, though in actuality the ordinance being foam darts, the launcher isn't that accurate to begin with but it does make it look ominous.
+
+![Image](https://benhoad.files.wordpress.com/2009/03/img_1437.jpg)
+
+The laser diode is USB powered by a spliced motorola USB cable, conveniently the voltage output of USB ports is identical to that of the operating voltage of the diode.
+
+![Image](https://benhoad.files.wordpress.com/2009/03/img_2151.jpg)
+
+Once everything was proven working the final model was built using heat shrink and cable ties.
+
+For maximum portability I now have the launcher connected to my laptop. On the screen you can see the Roborealm interface.
+
+Roborealm is actually a very simple application to grasp particularily in simple projects as this, it automatically handles device drivers, server commands, and video feeds.
+
+In this case, the only work I needed to do was to select the device to use, how to handle commands (in the form of the launcher's "move" variable) and modify the control webpage to accomodate all the function needed.
+
+To see this first hand I've supplied all [necessary files](http://www.2shared.com/file/5069628/b3f83ca8/rocket_launcher_hoad.html 'Rocket launcher files'), though you will have to download and install Roborealm youself, also this is specifically for this particular USB Rocket Launcher. You can use other brands/models but slight changes in Roborealm will be needed for it to work.

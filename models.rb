@@ -78,6 +78,11 @@ class Post < Maneki
   def published_at
     Chronic.parse(@headers[:published]) if @headers[:published]
   end
+
+  # Post main image
+  def main_image
+    @headers[:main_image] if @headers[:main_image]
+  end
   
   
   # Some posts are just links

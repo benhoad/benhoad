@@ -1,0 +1,17 @@
+# Dabbling in Unity
+
+ - main_image: /media/tanks.jpg
+ - published: 2017-08-10 12:00
+ - tags: code, design, learning
+
+ ![Image](/media/tanks.jpg)
+
+I've been spending time looking into coding in Unity. I got my first taste of game development with an old software package called [The Games Factory](http://www.mobygames.com/game/games-factory "Games Factory link to MobyGames"). It provided a basic engine to create sprites and handles events. Ever since I've wondered what I could achieve with my current skillset - given the last few ReactRiot and Node Knockout entires have been web-based games I felt I kept circling back to games... though, in those cases we opted to build games to get away from the typical coding-comp entires of dev tools that only appeal to a very niche group of people.
+
+Everyone can enjoy games.
+
+Unity piqued my interest for two reasons; the relatively steady learning curve and the export/build options. While there are still some issues and it's not a straightforward process to get iOS/tvOS builds happening, the community is actively patching and extending the codebase.
+
+So far I've completed a few tutorials and I'd highly recommend starting with the [Tanks lecture series](https://www.youtube.com/watch?v=paLLfWd2k5A&list=PLclF8feY8EKLw5Un6Z2Syt2_35qsdpnHt "Tanks lecture series link").
+
+I've also exported my build to WebGL and uploaded to Github Pages. [Play Tanks! in your browser](https://benhoad.github.io/tanks/)
