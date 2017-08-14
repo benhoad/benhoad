@@ -1,0 +1,13 @@
+# Node Girls 2017
+
+ - main_image: /media/nodegirls.jpg
+ - published: 2017-08-13 12:00
+ - tags: life, code
+
+![Image](/media/nodegirls.jpg)
+
+On Saturday I had to joy of being a mentor for Brisbane's first [Node Girls](http://nodegirls.com.au/ "Node Girls"), similarly to Rails Girls, Node Girls helps address the gender imbalance in the tech world. 
+
+Node Girls Brisbane was actually founded by a former Rails Girls participant and asked me if I'd like to help out and as a rails-to-js convert I was more than happy to help.
+
+The workshop covered the basics of Node.js, the Express framework, and touched on the concepts of client-server separation. If your interested the [resources are available on Github](https://github.com/node-girls-australia 'link to node girls workshop github').
