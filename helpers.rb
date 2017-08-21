@@ -32,7 +32,14 @@ helpers do
       "I'm Ben Hoad and I'm a frontend developer and designer - I blog about life, code, design, and stuff."
     end
   end
-  
+
+  def page_image
+    if defined?(@post) && ! @post.nil?
+      "https://benhoad.net#{main_image(@post)}"
+    else
+      'https://benhoad.net/images/ben-profile.jpg'
+    end
+  end
   
   # Grab the full url of the current site
   def url

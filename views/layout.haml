@@ -3,18 +3,10 @@
   %head
     %title= page_title
     %meta{ name: "description", content: page_description }/
-
     %meta{ property: 'og:title', content: page_title }/
     %meta{ property: 'og:description', content: page_description }/
-
-    -if @post
-      %meta{ property: 'og:image', content: "https://benhoad.net#{main_image(@post)}" }/
-      %meta{ property: 'og:url', content: "https://benhoad.net/#{@post.slug}" }/
-    -else
-      %meta{ property: 'og:image', content: 'https://benhoad.net/images/ben-profile.jpg' }/
-      %meta{ property: 'og:url', content: 'https://benhoad.net' }/
-
-    
+    %meta{ property: 'og:image', content: page_image }/
+    %meta{ property: 'og:url', content: url }/
     %meta{ property: 'og:type', content: 'article' }/
     %meta{ property: 'fb:admins', content: '632768409' }/
     %meta{ property: 'article:author', content: '632768409' }/
