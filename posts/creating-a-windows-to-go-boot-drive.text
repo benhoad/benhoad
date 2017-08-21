@@ -14,7 +14,7 @@ In preparation of my eventual eGPU build I've been exploring the possibility of 
  - [Windows ISO](https://www.microsoft.com/en-au/software-download/windows10ISO "Windows ISO Download Link") : Open link on Mac otherwise it'll provide an install instead of a direct ISO.
  - [Rufus](https://rufus.akeo.ie/ "Rufus Download") : This does require a Windows PC... I'm yet to find something that replaces Rufus for Mac.
  - Some External drive, (USB, Firewire, Thunderbolt) : In my case I've bought a [Samsung T3 500GB](http://www.samsung.com/au/memory-storage/portable-ssd-t3/MU-PT500BWW/ "Samsung T3 link")
- - You might need an external keyboard and mouse. The touchbar Macbook Pro's keyboard that I have wouldn't respond until the drivers are installed.
+ - You might need an external keyboard and mouse. The touchbar Macbook Pro's keyboard that I have wouldn't respond until the drivers were installed.
 
 ## Download Windows drivers
 
