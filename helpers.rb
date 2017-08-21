@@ -40,7 +40,14 @@ helpers do
       'https://benhoad.net/images/ben-profile.jpg'
     end
   end
-  
+
+  def page_url
+    if defined?(@post) && ! @post.nil?
+      "https://benhoad.net/#{@post.slug}"
+    else
+      url
+    end
+  end
   # Grab the full url of the current site
   def url
     'https://' + request.host
