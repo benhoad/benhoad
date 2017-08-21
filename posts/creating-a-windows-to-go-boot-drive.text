@@ -34,7 +34,7 @@ Eventually you'll be greeted with the boot icons. You should see at least two ic
 
 Click "EFI_Boot" and hit enter.
 
-This part should feel like a standard Windows install but it'll be storing all Windows configurations on the external drive. One important thing to note with this install is that every time you want to boot into Windows you'll need to hold the alt key and do the above. This includes any time Windows reboots while first setting up. If you walk away while it's installing and you find yourself booted into MacOS, don't fret, just reboot, hold alt, and continure the install.
+This part should feel like a standard Windows install but it'll be storing all Windows configurations on the external drive. One important thing to note with this install is that every time you want to boot into Windows you'll need to hold the alt key and do the above. This includes any time Windows reboots while first setting up. If you walk away while it's installing and you find yourself booted into MacOS, don't fret, just reboot, hold alt, and continue the install.
 
 Another important thing to know is that Windows will require a Serial Key eventually (you can skip it when installing to test if this process will even work for you).
 

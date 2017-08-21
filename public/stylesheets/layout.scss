@@ -339,6 +339,10 @@ article > ul {
     text-align: justify;
     font-size: 18px;
     line-height: 25px;
+    max-width: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 article > ul > li {
     margin-bottom: 15px;
