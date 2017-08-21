@@ -6,7 +6,12 @@
 
     %meta{ property: 'og:title', content: page_title }/
     %meta{ property: 'og:description', content: page_description }/
-    %meta{ property: 'og:image', content: 'https://benhoad.net/images/ben-profile.jpg' }/
+
+    -if @post
+      %meta{ property: 'og:image', content: "https://benhoad.net#{main_image(@post)}" }/
+    -else
+      %meta{ property: 'og:image', content: 'https://benhoad.net/images/ben-profile.jpg' }/
+
     %meta{ property: 'og:url', content: 'https://benhoad.net' }/
     %meta{ property: 'og:type', content: 'article' }/
     %meta{ property: 'fb:admins', content: '632768409' }/
