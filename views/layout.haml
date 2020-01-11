@@ -22,6 +22,7 @@
     %link{ rel: "apple-touch-icon", type: "image/png", href: "/images/apple-touch-icon.png" }/
     %link{ rel: "alternate", type: "application/rss+xml", href: "http://feeds.feedburner.com/benhoad", title: "benhoad.net RSS" }/
     %link{ rel: "icon", type: "image/png", href: "/images/favicon.png" }/
+    %link{ rel:"stylesheet", href: "https://fonts.googleapis.com/icon?family=Material+Icons" }
     
     %style
       = @style
@@ -92,6 +93,32 @@
             Email address copied to clipboard!
           .subtext
             This is done to prevent scraping and accidentally opening Mail/Outlook with a 'mailto' link.
+    .notice#shout
+      %p.original 
+        Like what I do? 
+        %em Shout me a coffee or whatever.
+      %section.reveal.hide
+        %h2 Shout a ...
+        .options
+          %a{href: "https://www.paypal.me/BenjaminHoad/10", class: "option"}
+            .circle
+              %i.material-icons emoji_food_beverage
+            %label Coffee/Beverage
+          %a{href: "https://www.paypal.me/BenjaminHoad/25", class: "option"}
+            .circle
+              %i.material-icons local_movies
+            %label Movie
+          %a{href: "https://www.paypal.me/BenjaminHoad/100", class: "option"}
+            .circle
+              %i.material-icons build
+            %label Project Part
+          %a{href: "", class: "option", id: "tesla" }
+            .circle
+              %i.material-icons directions_car
+            %label Tesla
+        
+        %p
+          \...or just share my posts online. I'm easy.
 
     :javascript
       var _gaq = _gaq || [];
@@ -201,6 +228,42 @@
               1500
             );
           });
+
+        let notice = document.getElementById("shout");
+        notice.addEventListener('click', function(){
+          document.getElementsByClassName('hide')[0].classList.remove("hide");
+          document.getElementsByClassName('original')[0].classList.add("hide");
+          window.scrollTo({
+            top: window.pageYOffset + notice.getBoundingClientRect().top,
+            behavior: 'smooth'
+          });
+
+
+
+        });
+
+        let telsaComments = ['wat? I\'m kidding.', "c'mon now...", "If you insist..."];
+        let teslaCount = 0;
+
+        let tesla = document.getElementById("tesla");
+        let teslaLabel = tesla.getElementsByTagName("label")[0];
+        console.log(teslaLabel);
+
+        tesla.addEventListener('click', function(e){
+          console.log(tesla);
+          tesla.classList.add('active');
+          if(teslaCount <= 2){
+            e.preventDefault();
+            teslaLabel.innerText = telsaComments[teslaCount];
+            teslaCount++;
+
+            if(teslaCount > 2){
+              tesla.setAttribute('href', 'https://www.paypal.me/BenjaminHoad/100000');
+            }
+          }
+        });
       });
+
+    
 
       
