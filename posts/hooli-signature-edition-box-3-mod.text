@@ -6,7 +6,7 @@
 
  ![Image](/media/box3mod.jpg)
 
-I've always been a fan of [HBO's Silicon Valley](https://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)) and I had always been looking for an excuse to build the [Signature Edition Box 3](https://www.youtube.com/watch?v=6KbRA2RjhgQ). I was almost tempted to build it for my last ITX build but opted instead for an RGB-rainbow-vomit Phantek's Shift build.
+I've always been a fan of [HBO's Silicon Valley](https://en.wikipedia.org/wiki/Silicon_Valley_(TV_series) and I had always been looking for an excuse to build the [Signature Edition Box 3](https://www.youtube.com/watch?v=6KbRA2RjhgQ). I was almost tempted to build it for my last ITX build but opted instead for an RGB-rainbow-vomit Phantek's Shift build.
 
 My aim of this project was to build an ITX-compatible SFFPC case that in the interim could double as an EGPU. Initially my intent was to 3d print the entire thing from scratch but after discovering the [Silverstone ML08](https://www.silverstonetek.com/product.php?pid=607&area=en), which is a fairly slim HTPC style SFX-PSU case, I decided I could easily replace the front panel for the desired aesthetic without having to worry about mountings, power earthing, and structural quality. 
 
@@ -14,7 +14,7 @@ My aim of this project was to build an ITX-compatible SFFPC case that in the int
 
 After disassembling the ML08 I set about measuring the front panel's mounting points and speculating on required parts. I ended up reusing both USB ports (replacing the serial connector that the box 3 should have) and with any luck find somewhere to attach the mic and headphone connections - they were nixed in the end as the pcb was too much of a hassle to mount cleanly and I didn't feel like the hidden magnetic door cover I had planned would be as seamless IRL.
 
-After many hours of tweaking I settLED on this:
+After many hours of tweaking I settled on this:
 
 ![Image](/media/fusion360.jpg)
 
