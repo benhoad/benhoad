@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby "2.3.3"
+ruby "2.6.5"
 
-gem 'sinatra', '~> 1.4', '>= 1.4.7'
+gem 'sinatra', '~> 2.0.5', '>= 2.0.0'
 
 gem 'chronic', '~> 0.10.2'
 
